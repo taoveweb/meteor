@@ -17,7 +17,14 @@ Template.hello.helpers({
 Template.hello.events({
   'click button'(event, instance) {
     // increment the counter when button is clicked
-    instance.conter.set(instance.counter.get() + 1);u
+    instance.conter.set(instance.counter.get() + 1);
+    MeteorCamera.getPicture(funcion(e,r){
+    	if ( e) {
+    		alert(e.message)
+    	}else{
+    		myColl.insert(time:new Date(),pic:r)
+    	}
+    })
 
   },
 });
